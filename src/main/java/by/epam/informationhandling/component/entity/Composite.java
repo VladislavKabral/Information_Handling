@@ -24,6 +24,10 @@ public class Composite implements Component {
         children.add(child);
     }
 
+    public int getChildrenCount() {
+        return children.size();
+    }
+
     @Override
     public boolean equals(Object object) {
         if (this == object){
