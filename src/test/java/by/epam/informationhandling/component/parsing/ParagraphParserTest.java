@@ -16,7 +16,7 @@ public class ParagraphParserTest {
     private static final String FOURTH_SENTENCE = "I can do all things.";
     private static final String FIFTH_SENTENCE = "What`s up?";
 
-    private static final String ORIGINAL_PARAGRAPH = FIRST_SENTENCE + " " + SECOND_SENTENCE + " " + THIRD_SENTENCE + " " +
+    private static final String SOURCE_PARAGRAPH = FIRST_SENTENCE + " " + SECOND_SENTENCE + " " + THIRD_SENTENCE + " " +
             FOURTH_SENTENCE + " " + FIFTH_SENTENCE;
 
     private static final Composite FIRST_SENTENCE_COMPOSITE = new Composite(Arrays.asList(Lexeme.word("It"),
@@ -55,7 +55,7 @@ public class ParagraphParserTest {
         ParagraphParser paragraphParser = new ParagraphParser(sentenceParser);
 
         //when
-        Composite actualParagraphComposite = paragraphParser.parse(ORIGINAL_PARAGRAPH);
+        Composite actualParagraphComposite = paragraphParser.parse(SOURCE_PARAGRAPH);
 
         //then
         Assert.assertEquals(EXPECTED_PARAGRAPH_COMPOSITE, actualParagraphComposite);

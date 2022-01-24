@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class SentenceParserTest {
 
-    private static final String ORIGINAL_SENTENCE = "It has survived - not only (five) centuries, but also the leap" +
+    private static final String SOURCE_SENTENCE = "It has survived - not only (five) centuries, but also the leap" +
             " into [13 2 +] electronic typesetting, remaining [3  5 +] essentially [15  3 /] unchanged.";
 
     private static final Composite EXPECTED_COMPOSITE = new Composite(Arrays.asList(Lexeme.word("It"),
@@ -41,7 +41,7 @@ public class SentenceParserTest {
         //given
 
         //when
-        Composite actualComposite = sentenceParser.parse(ORIGINAL_SENTENCE);
+        Composite actualComposite = sentenceParser.parse(SOURCE_SENTENCE);
 
         //then
         Assert.assertEquals(EXPECTED_COMPOSITE, actualComposite);
