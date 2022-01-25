@@ -25,6 +25,14 @@ public class TextLogic {
 
     private ExpressionCalculator expressionCalculator = new ExpressionCalculator();
 
+    public TextLogic(){
+
+    }
+
+    public TextLogic(ExpressionCalculator expressionCalculator) {
+        this.expressionCalculator = expressionCalculator;
+    }
+
     public Composite parse(String text) {
         TextParserBuilder builder = new TextParserBuilder();
         Parser parser = builder.build();

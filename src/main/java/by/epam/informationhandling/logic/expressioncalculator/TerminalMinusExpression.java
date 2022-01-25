@@ -6,7 +6,7 @@ public class TerminalMinusExpression implements AbstractExpression{
     public void interpret(Context context) {
         Integer firstNumber = context.pop();
         Integer secondNumber = context.pop();
-        Integer result = firstNumber - secondNumber;
+        Integer result = secondNumber - firstNumber;
 
         context.push(result);
     }
